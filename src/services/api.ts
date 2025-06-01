@@ -1,6 +1,6 @@
 import { Product } from '../types';
 
-const BASE_URL = 'https://fakestoreapi.com';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const fetchProducts = async (): Promise<Product[]> => {
   const response = await fetch(`${BASE_URL}/products`);
